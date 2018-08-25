@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>商品列表详情页</title>
+  <script src="lib/js/flexible.js"></script>
+  <link rel="stylesheet" href="lib/mui/css/mui.css">
+  <link rel="stylesheet" href="css/common.css">
+  <link rel="stylesheet" href="css/productlist.css">
+</head>
+
+<body>
+  <div class="container">
+    <div class="mb_header">
+      <img class="mb_logo" src="images/header_logo.png" alt="">
+      <img class="mui-pull-right mb_app" src="images/header_app.png" alt="">
+    </div>
+    <div class="mb_content">
+      <div class="mb_search">
+        <input type="text" placeholder="请输入你想比价的商品" class="mui-pull-left">
+        <button class="mui-pull-right mui-btn mui-btn-yellow">搜索</button>
+      </div>
+      <div class="mb_crumb">
+
+        <a href="index.html">首页&gt;</a>
+        <a href="category.html">全部分类&gt;</a>
+        <a href="#" class="title">首页&gt;</a>
+        <div class="mui-pull-right">筛选</div>
+
+      </div>
+      <div class="mb_productlist">
+        <!-- 商品列表详情挖坑 -->
+      </div>
+      <div class="mb_productfooter mui-clearfix">
+        <div class="prev  mui-pull-left">
+          <a href="#">上一页</a>
+        </div>
+        <select name="" id="" class="mui-pull-left">
+          <option value="">1</option>
+          <option value="">2</option>
+          <option value="">3</option>
+        </select>
+        <div class="next mui-pull-right">
+          <a href="#">下一页</a>
+        </div>
+
+      </div>
+
+    </div>
+
+
+    <div class="mb_footer">
+      <div class="footertop">
+        <a href="javascript:;">登录</a>
+        <a href="javascript:;">注册</a>
+        <a href="#">
+          <span class="mui-icon mui-icon-arrowup"></span>返回顶部</a>
+      </div>
+      <p class="txt">
+        <a href="#" class="red">手机APP下载</a>
+        <a href="#">慢慢买手机版</a>
+        <a href="#" class="grey">--掌上比价平台</a>
+      </p>
+      <p class="wz">m.manmanbuy.com</p>
+    </div>
+  </div>
+
+  <script type="text/html" id="tpl_list">
+    {{each result v i}}
+    <div class="product mui-clearfix">
+        <a href="bijia.html?productid={{v.productId}}&categoryId={{v.categoryId}}">
+          <div class="left mui-pull-left">
+            <img src="images/categorylist.jpg" alt="">
+          </div>
+          <div class="right">
+            <p class="productName ">{{v.productName}}</p>
+            <p class="price">{{v.productPrice}}</p>
+            <p class="more">
+              <span>{{v.productQuote}}</span>
+              <span>{{v.productCom}}</span>
+            </p>
+          </div>
+        </a>
+      </div>
+      {{/each}}
+  </script>
+
+
+  <script src="lib/jquery/jquery.min.js"></script>
+  <script src="lib/mui/js/mui.js"></script>
+  <script src="lib/art-template-master/lib/template-web.js"></script>
+  <script src="js/common/Route.js"></script>
+  <script src="js/common/Tools.js"></script>
+  <script src="js/productlist.js"></script>
+</body>
+
+</html>

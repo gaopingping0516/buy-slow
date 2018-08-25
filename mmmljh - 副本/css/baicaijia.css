@@ -1,0 +1,347 @@
+@charset "utf-8";
+/* 初始化 */
+body,
+div,
+ul,
+li,
+ol,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+input,
+textarea,
+select,
+p,
+dl,
+dt,
+dd,
+a,
+img,
+button,
+form,
+table,
+th,
+tr,
+td,
+tbody,
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+menu,
+nav,
+section {
+  margin: 0;
+  padding: 0;
+}
+/* 禁用iPhone中Safari的字号自动调整  */
+html {
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  /* 解决IOS默认滑动很卡的情况 */
+  /* -webkit-overflow-scrolling : touch;  */
+}
+/* 设置HTML5元素为块 */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  font: 12px/1.5 'Microsoft YaHei', '宋体', Tahoma, Arial, sans-serif;
+  color: black;
+  background-color: #F7F7F7;
+}
+/*去除边框*/
+fieldset,
+img,
+input,
+button,
+textarea {
+  border: none;
+  /*去除的蓝色小边框*/
+  outline-style: none;
+}
+/*禁止表单域缩放*/
+textarea {
+  resize: none;
+}
+/* 禁止缩放表单 */
+input[type="submit"],
+input[type="reset"],
+input[type="button"],
+input {
+  resize: none;
+  border: none;
+}
+/* 取消链接高亮  */
+a {
+  text-decoration: none;
+  color: black;
+  /* 取消链接高亮  */
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  font-family: 'Microsoft YaHei', Tahoma, Arial, sans-serif;
+}
+a:hover {
+  text-decoration: none;
+}
+/* 图片自适应 */
+img {
+  width: 100%;
+  height: auto;
+  width: auto\9;
+  /* ie8 */
+  /*解决图片底部对其问题*/
+  display: block;
+  border: none;
+  -ms-interpolation-mode: bicubic;
+  /*为了照顾ie图片缩放失真*/
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-decoration: none;
+  font-weight: normal;
+  font-size: 100%;
+}
+em,
+i {
+  font-style: normal;
+}
+ul,
+li,
+ol {
+  list-style-type: none;
+}
+strong {
+  font-weight: normal;
+}
+/*单行溢出*/
+/*多行溢出 手机端使用*/
+/* 水平垂直居中的公共类 */
+/* 水平居中公共类 */
+/* 垂直居中公共类 */
+html,
+body {
+  /*大容器*/
+}
+html .sn-container,
+body .sn-container {
+  max-width: 750px;
+  min-width: 320px;
+  height: 1000px;
+  margin: 0 auto;
+  background-color: pink;
+  position: relative;
+}
+.bgc {
+  background: #ff841d;
+}
+.bgcolor {
+  background: #f1f1f1;
+}
+.container {
+  max-width: 750px /* 750/50 */;
+  min-width: 320px /* 320/50 */;
+  margin: 0 auto;
+  background: #f1f1f1;
+}
+/*切换显示隐藏类*/
+.dp {
+  display: none;
+}
+.boxborderbottom {
+  border-bottom: 2px solid #f4483e;
+}
+/*顶部导航条*/
+.top-nav {
+  width: 100%;
+  height: 40px;
+  background-color: white;
+}
+.top-nav > .nav-ul {
+  margin-right: 40px;
+  height: 100%;
+  overflow: scroll;
+  position: relative;
+}
+.top-nav > .nav-ul > ul {
+  height: 40px;
+  position: absolute;
+  zoom: 1;
+}
+.top-nav > .nav-ul > ul:after {
+  content: "";
+  display: block;
+  visibility: hidden;
+  height: 0;
+  clear: both;
+}
+.top-nav > .nav-ul > ul > li {
+  height: 38px;
+  float: left;
+  line-height: 38px;
+  box-sizing: border-box;
+  text-align: center;
+  margin: 0 15px;
+}
+.top-nav > .nav-ul > ul > li:nth-of-type(1) a {
+  color: #f4483e;
+}
+.top-nav > .nav-ul > ul > li > a {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  font-size: 14px;
+}
+.top-nav > .top-pic {
+  width: 38px;
+  height: 100%;
+  padding: 7px;
+  box-sizing: border-box;
+  background-image: url("data:image/svg+xml;charset=utf-8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1024 1024' width='17' height='17'><path fill='#565656' d='M978.261333 430.321067c0 157.2864-127.488 284.808533-284.8768 284.808533-157.218133 0-284.706133-127.488-284.706133-284.808533s127.488-284.7744 284.706133-284.7744c22.254933 0 43.793067 2.798933 64.648533 7.68l63.2832-192.136533c3.208533-9.352533 14.916267-14.062933 26.248533-10.410667 11.298133 3.720533 17.8176 14.5408 14.848 23.8592l-63.249067 191.488C904.055467 208.078933 978.261333 310.4448 978.261333 430.321067zM693.384533 184.834133c-135.5776 0-245.384533 109.909333-245.384533 245.521067 0 135.611733 109.943467 245.486933 245.384533 245.486933 135.68 0 245.521067-109.909333 245.521067-245.486933C938.939733 294.7776 829.064533 184.834133 693.384533 184.834133zM366.4896 683.863467l-18.261333 0L98.6112 683.863467c-12.049067 0-21.8112-9.762133-21.8112-21.777067 0-12.049067 9.762133-21.8112 21.8112-21.8112l249.617067 0 5.461333 0c9.147733 15.189333 19.114667 29.832533 30.139733 43.588267L366.4896 683.863467zM297.7792 457.866667 277.6064 457.866667 98.6112 457.866667c-12.049067 0-21.8112-9.762133-21.8112-21.777067 0-12.0832 9.762133-21.8112 21.8112-21.8112l176.708267 0c0 0 0 0 0 0.034133l22.459733 0c-0.4096 7.236267-1.092267 14.404267-1.092267 21.777067S297.3696 450.6304 297.7792 457.866667zM348.2624 231.869867 326.3488 231.869867 98.6112 231.869867c-12.049067 0-21.8112-9.659733-21.8112-21.8112 0-12.0832 9.762133-21.742933 21.8112-21.742933l249.617067 0 5.973333 0 12.288 0 17.339733 0c-11.025067 13.755733-20.923733 28.3648-30.071467 43.52L348.2624 231.835733zM605.3888 5.975467l-127.0784 0-122.538667 0L337.544533 5.975467 87.927467 5.975467c-12.049067 0-21.8112-9.762133-21.8112-21.845333 0-12.0832 9.762133-21.879467 21.8112-21.879467l249.617067 0 18.261333 0 122.538667 0 127.044267 0 78.711467 0-16.0768 43.6224L605.3888 5.975467z' transform='translate(0, 812) scale(1, -1)'/></svg>");
+  float: right;
+  background-size: 100%;
+  background-clip: content-box;
+  background-origin: content-box;
+}
+/*主体内容部分*/
+.bcj-center > .bcj-kuang {
+  height: 150px;
+  background-color: #F7F7F7;
+}
+.bcj-center > .bcj-kuang > .goods-content {
+  background-color: white;
+  width: 100%;
+  height: 150px;
+  margin-top: 10px;
+  box-sizing: border-box;
+}
+.bcj-center > .bcj-kuang > .goods-content > .goods-img {
+  padding-top: 10px;
+  width: 135px;
+  height: 130px;
+  box-sizing: border-box;
+  float: left;
+}
+.bcj-center > .bcj-kuang > .goods-content > .goods-img > img {
+  width: 100%;
+  height: 100%;
+}
+.bcj-center > .bcj-kuang > .goods-content > .goods-info {
+  padding-top: 10px;
+  box-sizing: border-box;
+  margin-left: 150px;
+  height: 100%;
+}
+.bcj-center > .bcj-kuang > .goods-content > .goods-info > .goods-title {
+  height: 30px;
+  font-size: 14px;
+  line-height: 20px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+.bcj-center > .bcj-kuang > .goods-content > .goods-info .goods-price {
+  height: 40px;
+}
+.bcj-center > .bcj-kuang > .goods-content > .goods-info .goods-price > i {
+  color: #f4483e;
+  font-size: 18px;
+}
+.bcj-center > .bcj-kuang > .goods-content > .goods-info .goods-price > em {
+  margin-left: 2px;
+  color: #f4483e;
+}
+.bcj-center > .bcj-kuang > .goods-content > .goods-info .goods-price > span {
+  font-size: 24px;
+  font-weight: 500;
+  color: #f4483e;
+  margin-left: 2px;
+}
+.bcj-center > .bcj-kuang > .goods-content > .goods-info .goods-price > del {
+  color: #aaa;
+  margin-left: 10px;
+}
+.bcj-center > .bcj-kuang > .goods-content > .goods-info > .goods-progress {
+  height: 30px;
+}
+.bcj-center > .bcj-kuang > .goods-content > .goods-info > .goods-progress > span {
+  width: 100px;
+  height: 13px;
+  display: inline-block;
+  background: #ffb7b7;
+  border-radius: 5px;
+  position: relative;
+  border: 1px solid #fc353a;
+}
+.bcj-center > .bcj-kuang > .goods-content > .goods-info > .goods-progress > span > i {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+}
+.bcj-center > .bcj-kuang > .goods-content > .goods-info > .goods-progress > span > em {
+  background-color: #fc353a;
+  width: 1%;
+  position: absolute;
+  left: -10px;
+  height: 13px;
+}
+.bcj-center > .bcj-kuang > .goods-content > .goods-info > .goods-progress em {
+  display: inline-block;
+  height: 15px;
+  margin-left: 10px;
+  vertical-align: 3px;
+  color: #f4483e;
+}
+.bcj-center > .bcj-kuang > .goods-content > .goods-info .goods-bottom {
+  position: relative;
+}
+.bcj-center > .bcj-kuang > .goods-content > .goods-info .goods-bottom .goods-youhuiquan {
+  width: 120px;
+  height: 20px;
+  border: 1px dashed hotpink;
+  text-align: center;
+}
+.bcj-center > .bcj-kuang > .goods-content > .goods-info .goods-bottom .goods-youhuiquan > a {
+  color: #f4483e;
+  text-align: center;
+  display: inline-block;
+}
+.bcj-center > .bcj-kuang > .goods-content > .goods-info .goods-bottom .xiadanlianjie {
+  width: 58px;
+  height: 28px;
+  background-color: #ff5e5d;
+  position: absolute;
+  right: 10px;
+  top: -5px;
+  border-radius: 5px;
+}
+.bcj-center > .bcj-kuang > .goods-content > .goods-info .goods-bottom .xiadanlianjie > a {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  line-height: 28px;
+  color: white;
+}

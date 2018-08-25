@@ -1,0 +1,321 @@
+@charset "utf-8";
+/* 初始化 */
+body,
+div,
+ul,
+li,
+ol,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+input,
+textarea,
+select,
+p,
+dl,
+dt,
+dd,
+a,
+img,
+button,
+form,
+table,
+th,
+tr,
+td,
+tbody,
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+menu,
+nav,
+section {
+  margin: 0;
+  padding: 0;
+}
+/* 禁用iPhone中Safari的字号自动调整  */
+html {
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  /* 解决IOS默认滑动很卡的情况 */
+  /* -webkit-overflow-scrolling : touch;  */
+}
+/* 设置HTML5元素为块 */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  font: 12px/1.5 'Microsoft YaHei', '宋体', Tahoma, Arial, sans-serif;
+  color: black;
+  background-color: #F7F7F7;
+}
+/*去除边框*/
+fieldset,
+img,
+input,
+button,
+textarea {
+  border: none;
+  /*去除的蓝色小边框*/
+  outline-style: none;
+}
+/*禁止表单域缩放*/
+textarea {
+  resize: none;
+}
+/* 禁止缩放表单 */
+input[type="submit"],
+input[type="reset"],
+input[type="button"],
+input {
+  resize: none;
+  border: none;
+}
+/* 取消链接高亮  */
+a {
+  text-decoration: none;
+  color: black;
+  /* 取消链接高亮  */
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  font-family: 'Microsoft YaHei', Tahoma, Arial, sans-serif;
+}
+a:hover {
+  text-decoration: none;
+}
+/* 图片自适应 */
+img {
+  width: 100%;
+  height: auto;
+  width: auto\9;
+  /* ie8 */
+  /*解决图片底部对其问题*/
+  display: block;
+  border: none;
+  -ms-interpolation-mode: bicubic;
+  /*为了照顾ie图片缩放失真*/
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-decoration: none;
+  font-weight: normal;
+  font-size: 100%;
+}
+em,
+i {
+  font-style: normal;
+}
+ul,
+li,
+ol {
+  list-style-type: none;
+}
+strong {
+  font-weight: normal;
+}
+/*单行溢出*/
+/*多行溢出 手机端使用*/
+/* 水平垂直居中的公共类 */
+/* 水平居中公共类 */
+/* 垂直居中公共类 */
+html,
+body {
+  /*大容器*/
+}
+html .sn-container,
+body .sn-container {
+  max-width: 750px;
+  min-width: 320px;
+  height: 1000px;
+  margin: 0 auto;
+  background-color: pink;
+  position: relative;
+}
+.bgc {
+  background: #ff841d;
+}
+.bgcolor {
+  background: #f1f1f1;
+}
+.container {
+  max-width: 750px /* 750/50 */;
+  min-width: 320px /* 320/50 */;
+  margin: 0 auto;
+  background: #f1f1f1;
+}
+/*切换显示隐藏类*/
+.dp {
+  display: none;
+}
+.boxborderbottom {
+  border-bottom: 2px solid #f4483e;
+}
+/*导航图标*/
+.nav-points {
+  padding-top: 0.2rem /* 10/50 */;
+  padding-bottom: 0.4rem /* 10/50 */;
+  width: 100%;
+  box-sizing: border-box;
+  background-color: white;
+}
+.nav-points > ul {
+  zoom: 1;
+}
+.nav-points > ul:after {
+  content: "";
+  display: block;
+  visibility: hidden;
+  height: 0;
+  clear: both;
+}
+.nav-points > ul > li {
+  width: 25%;
+  float: left;
+  margin-top: 20px;
+}
+.nav-points > ul > li > a {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+}
+.nav-points > ul > li > a > img {
+  width: 50px;
+  margin: 0 auto;
+}
+.nav-points > ul > li > a p {
+  margin-top: .1rem;
+  text-align: center;
+}
+.nav-points > ul .yc {
+  display: none;
+}
+/*折扣推荐*/
+.count {
+  width: 100%;
+  height: 35px /* 35/50 */;
+  padding-left: 10px;
+  box-sizing: border-box;
+  background: #ff841d;
+  position: relative;
+  line-height: 35px;
+  font-size: 16px;
+  color: white;
+}
+.count i {
+  display: inline-block;
+  width: 20px /* 20/50 */;
+  height: 20px /* 20/50 */;
+  position: absolute;
+  right: 20px /* 20/50 */;
+  top: 7px /* 7/50 */;
+}
+/*折扣推荐商品*/
+.goods {
+  padding: 10px /* 10/50 */ 20px;
+  width: 100%;
+}
+.goods > a {
+  width: 100%;
+  height: 100%;
+  display: block;
+  border-bottom: 1px solid #e7e7e7;
+}
+.goods .product-img {
+  width: 100px /* 100/50 */;
+  height: 100px /* 100/50 */;
+  float: left;
+}
+.goods .product-info {
+  height: 100px /* 100/50 */;
+  margin-left: 100px /* 100/50 */;
+}
+.goods .product-info > .info-title {
+  height: 63px /* 57/50 */;
+  font-size: 15px /* 16/50 */;
+  padding-left: 20px;
+  box-sizing: border-box;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  word-break: break-all;
+}
+.goods .product-info > .info-title > span {
+  color: #ff6c00;
+}
+.goods .product-info .mall {
+  padding-left: 20px;
+  height: 24px /* 24/50 */;
+  color: #a1a1a1;
+}
+.goods .product-info .mall-right {
+  float: right;
+  color: #a1a1a1;
+  margin-right: 40px;
+}
+.goods .product-info .mall-right i {
+  display: inline-block;
+  width: 14px /* 14/50 */;
+  height: 15px /* 15/50 */;
+  background: url(../images/comment.svg) no-repeat;
+  margin-right: 5px /* 5/50 */;
+  background-size: 100%;
+  vertical-align: middle;
+}
+/*品牌排行*/
+.paihang {
+  width: 100%;
+  height: 35px /* 35/50 */;
+  padding-left: 10px;
+  box-sizing: border-box;
+  margin-top: 10px;
+  background: #ff841d;
+  position: relative;
+  line-height: 35px;
+  font-size: 16px;
+  color: white;
+}
+.paihang i {
+  display: inline-block;
+  width: 20px /* 20/50 */;
+  height: 20px /* 20/50 */;
+  position: absolute;
+  right: 20px /* 20/50 */;
+  top: 7px /* 7/50 */;
+}
+/*更多优惠信息*/
+.more-downprice {
+  position: relative;
+  height: 30px;
+  margin: 0 20px;
+  border: 1px solid #ccc;
+  text-align: center;
+  font-size: 16px;
+  line-height: 30px;
+}
+.more-downprice > a {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}

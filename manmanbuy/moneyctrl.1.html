@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="lib/js/flexible.js"></script>
+  <link rel="stylesheet" href="lib/mui/css/mui.css">
+  <link rel="stylesheet" href="css/common.css">
+  <link rel="stylesheet" href="css/moneyctrl.css">
+</head>
+
+<body>
+  <div class="container">
+    <div class="mb_header">
+      <a href="javascript:history.go(-1)" class="mui-icon mui-icon-arrowleft"></a>
+      <span class="txt">省钱控-最新优惠</span>
+      <img class="mui-pull-right mb_app" src="images/header_app.png" alt="">
+    </div>
+    <div class="mb_content">
+
+      <div class="mb_recommend">
+
+        <ul class="recPro ">
+          <!-- 折扣挖坑 -->
+        </ul>
+
+      </div>
+      <div class="mb_productfooter mui-clearfix">
+        <div class="prev  mui-pull-left">
+          上一页
+        </div>
+        <select name="" id="" class="mui-pull-left">
+          <!-- <option value="1">1</option> -->
+          <!-- <option value=2>2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+          <option value="6">6</option>
+          <option value="7">7</option>
+          <option value="8">8</option>
+          <option value="9">9</option>
+          <option value="10">10</option>
+          <option value="11">11</option>
+          <option value="12">12</option>
+          <option value="13">13</option>
+          <option value="14">14</option>
+          <option value="15">15</option> -->
+        </select>
+        <div class="next mui-pull-right">
+          下一页
+        </div>
+
+      </div>
+
+    </div>
+    <div class="mb_footer">
+      <div class="footertop">
+        <a href="javascript:;">登录</a>
+        <a href="javascript:;">注册</a>
+        <a href="#">
+          <span class="mui-icon mui-icon-arrowup"></span>返回顶部</a>
+      </div>
+      <p class="txt">
+        <a href="#" class="red">手机APP下载</a>
+        <a href="#">慢慢买手机版</a>
+        <a href="#" class="grey">--掌上比价平台</a>
+      </p>
+      <p class="wz">m.manmanbuy.com</p>
+    </div>
+  </div>
+  <script type="text/html" id="tpl_discount">
+    {{each result v i}}
+    <li class="mui-clearfix">
+        <a href="moneyproduct.html?productid={{v.productId}}">
+          <div class="pro_left mui-pull-left">
+            {{#v.productImgLg}}
+          </div>
+          <div class="pro_right">
+            <p class="proName">{{v.productName}}
+              <span class="price">{{v.productPinkage}}</span>
+            </p>
+            <div class="other">
+              <span class="mall">{{v.productFrom}} | {{v.productTime}}</span>
+              <span class="comment mui-pull-right">
+                <i class="mui-icon   mui-icon-chat"></i>
+                {{(v.productComCount).slice(1,2)}}
+              </span>
+            </div>
+          </div>
+        </a>
+      </li>
+      {{/each}}
+  </script>
+
+  <script src="lib/jquery/jquery.min.js"></script>
+  <script src="lib/art-template-master/lib/template-web.js"></script>
+  <script src="js/common/Route.js"></script>
+  <script src="js/common/Tools.js"></script>
+  <script src="js/moneyctrl.js"></script>
+</body>
+
+</html>

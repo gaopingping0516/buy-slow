@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>categoryljh</title>
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <script src="./js/common/rem.js"></script>
+  <link rel="stylesheet" href="css/app.css"/>
+</head>
+
+<body>
+<div class="container">
+  <!-- 头部公共部分开始 -->
+  <div class="header"></div>
+
+  <!-- 搜索框 -->
+  <div class="check-area"></div>
+
+  <!-- 列表部分 -->
+  <div class="category-list">
+    <ul>
+      <!-- <li >
+          <a>大家电</a>
+          <i>
+              <img src="http://www.zuyushop.com/wap/images/arrow1.gif">
+          </i>
+
+      </li> -->
+    </ul>
+  </div>
+  <!-- 底部公共部分开始 -->
+  <div class="bottom"></div>
+</div>
+<script src="./js/common/jquery-1.12.4.js"></script>
+<script src="./js/common/HeaderAndFooter.js"></script>
+<script src="./js/common/route.js"></script>
+<script src="./js/common/template-web.js"></script>
+<script src="./js/page/category.js"></script>
+<script type="text/template" id="tpl">
+  {{ each result v i }}
+  <li class="addmore">
+    <i>
+      <img src="http://www.zuyushop.com/wap/images/arrow1.gif">
+    </i>
+    <a data-id="{{ v.titleId }}">{{ v.title }}</a>
+  </li>
+  {{/each}}
+</script>
+
+<script type="text/template" id="tmp">
+  <ul class="ul">
+    {{each result v}}
+    <li>
+      <a href="productlist.html?categoryid={{v.categoryId}}">{{v.category}}</a>
+    </li>
+    {{/each}}
+  </ul>
+
+</script>
+<!--  -->
+</body>
+
+</html>

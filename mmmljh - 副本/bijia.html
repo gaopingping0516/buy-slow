@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>productlistljh</title>
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <script src="./js/common/rem.js"></script>
+    <link rel="stylesheet" href="css/app.css" />
+</head>
+
+<body>
+    <!-- 包内容的大盒子 -->
+    <div class="container">
+        <!-- 头部公共部分开始 -->
+        <div class="header"></div>
+        <!-- 头部公共部分结束 -->
+
+        <!-- 搜索框 -->
+        <div class="check-area"></div>
+
+        <!-- 三级导航标题 -->
+        <div class="navAndchoose">
+            <div class="nav-l">
+                <a href="./index.html">首页></a>
+                <a href="./category.html">全部分类></a>
+                <a class="product-name">奥克斯></a>
+            </div>
+            <div class="choose-r">
+                <button>筛选</button>
+            </div>
+        </div>
+
+        <!-- 大图和标题 -->
+        <div class="bj-info">
+
+        </div>
+
+        <!-- 比价购买，产品参数，评价 -->
+        <!-- <div class="bijiacanping">
+            <div class="bijiacanping-left">
+                比价购买
+            </div>
+            <div class="bijiacanping-center">
+                产品参数
+            </div>
+            <div class="bijiacanping-right">
+                评价(2322)
+            </div>
+        </div> -->
+
+        <!-- 价格，店铺 -->
+        <!-- <div class="price-shop">
+            <div class="shop-tubiao">
+                <a href="#">
+                    <img src="http://sf.manmanbuy.com/images/sitelogo/13.png">
+                </a>
+            </div>
+            <div class="go-shopping">
+                    <button>去购买</button>
+                </div>
+            <div class="shop-nameprice">
+                <div class="shop-name">1号店</div>
+                <div class="sales-price">￥6488.00</div>
+            </div>
+            
+           
+        </div> -->
+        <!-- 注意事项 -->
+        <div class="note">
+            * 实际价格以各网站列出的实时售价为准，我们提供的价格可能有数小时至数日的延迟。
+        </div>
+
+        <!-- 网友评价 -->
+        <div class="wangyoupingjia">
+            网友评价
+        </div>
+
+
+        <!-- 评价具体内容 -->
+        <div class="pingjia-container">
+            
+        </div>
+
+
+
+        <!-- 底部公共部分开始 -->
+        <div class="bottom"></div>
+        <!-- 底部公共部分结束 -->
+
+    </div>
+
+</body>
+<script src="./js/common/jquery-1.12.4.js"></script>
+<script src="./js/common/HeaderAndFooter.js"></script>
+<script src="./js/common/route.js"></script>
+<script src="./js/page/bijia.js"></script>
+<script src="./js/common/template-web.js"></script>
+<script type="text/template" id="tpl">
+
+    <div class="bj-info-title">{{productName}}</div>
+    <div class="bj-info-img">
+        <a href="#">
+            {{@productImg}}
+        </a>
+        <div class="product-collect">
+            <a href="javascript:setfav(473088);">
+                <img src="http://www.zuyushop.com/wap/images/sc.jpg" width="39" height="39">
+            </a>
+        </div>
+
+    </div>
+    {{@bjShop}}
+</script>
+
+
+
+<script type="text/template" id="tmp">
+    {{each list v}}
+    <div class="pingjia">
+            <div class="pingjia-once-info">
+                <span class="shoujihao">{{v.comName}}</span>
+                <span class="pingjia-time">{{v.comTime}}</span>
+            </div>
+            <div class="come-form">
+                <span>{{v.comFrom}}</span>
+            </div>
+            <div class="pingjia-neirong">
+               {{v.comContent}}
+        </div>
+    </div>
+    {{/each}}
+</script>
+
+
+</html>

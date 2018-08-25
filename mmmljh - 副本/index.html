@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>首页</title>
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <script src="./js/common/rem.js"></script>
+    <link rel="stylesheet" href="css/app.css" />
+</head>
+
+<body>
+    <!-- 包内容的大盒子 -->
+    <div class="container">
+        <!-- 头部公共部分开始 -->
+        <div class="header"></div>
+        <!-- 头部公共部分结束 -->
+
+
+        <!-- 搜索框 -->
+        <div class="check-area"></div>
+
+
+        <!-- 导航图标 -->
+        <div class="nav-points">
+            <ul>
+                <li>
+                    <a href="./category.html">
+                        <img src="./images/ic_search.png">
+                        <p>比价搜索</p>
+                    </a>
+
+                </li>
+                <li>
+                    <a href="./moneyctrl.html"> 
+                        <img src="images/ic_cu.png">
+                        <p>省钱控</p>
+                    </a>
+
+                </li>
+                <li>
+                    <a href="./inlanddiscount.html">
+                        <img src="images/ic_coudanpin.png">
+                        <p>国内折扣</p>
+                    </a>
+
+                </li>
+                <li>
+                    <a href="./baicaijia.html">
+                        <img src="images/ic_bcj.png">
+                        <p>白菜价</p>
+                    </a>
+
+                </li>
+                <li>
+                    <a href="./moneyctrl.html"> 
+                        <img src="images/haitao.png" alt="海淘折扣">
+                        <p>海淘折扣</p>
+                    </a>
+
+                </li>
+                <li>
+                    <a href="./coupon.html">
+                        <img src="images/ic_temai.png">
+                        <p>优惠券</p>
+                    </a>
+
+                </li>
+                <li>
+                    <a href="./category.html">
+                        <img src="images/ic_trend.png">
+                        <p>查历史价</p>
+                    </a>
+
+                </li>
+                <li class="gengduo">
+                    <a>
+                        <img src="images/gengduo.png">
+                        <p>更多</p>
+                    </a>
+                </li>
+                <li class="yc">
+                    <a href="./gsproduct.html">
+                        <img src="images/ic_coudanpin.png">
+                        <p>凑单品</p>
+                    </a>
+
+                </li>
+                <li class="yc">
+                        <a href="./moneyctrl.html"> 
+                        <img src="images/ic_kb.png">
+                        <p>口碑排行</p>
+                    </a>
+
+                </li>
+                <li class="yc">
+                    <a>
+                        <img src="images/ic_mall.png">
+                        <p>商城导航</p>
+                    </a>
+
+                </li>
+                <li class="yc">
+                    <a>
+                        <img src="images/ic_pp.png" alt="品牌大全">
+                        <p>品牌大全</p>
+                    </a>
+
+                </li>
+            </ul>
+        </div>
+
+
+        <!-- 折扣推荐标题 -->
+        <div class="count">
+            超值折扣推荐
+            <i>
+                <img src="http://www.zuyushop.com/wap/images/more.png" width="20" height="20">
+            </i>
+        </div>
+
+
+        <!-- 折扣推荐商品 -->
+        <div class="goods">
+
+        </div>
+
+        <!-- 更多优惠信息 -->
+        <div class="more-downprice">
+            <a href="javascript:;">更多优惠信息 »</a>
+        </div>
+
+        <!-- 品牌排行 -->
+        <div class="paihang">
+            品牌排行
+            <i>
+                <img src="http://www.zuyushop.com/wap/images/more.png" width="20" height="20">
+            </i>
+        </div>
+
+        <!-- 底部公共部分开始 -->
+        <div class="bottom"></div>
+        <!-- 底部公共部分结束 -->
+
+    </div>
+
+</body>
+<script src="./js/common/jquery-1.12.4.js"></script>
+<script src="./js/common/HeaderAndFooter.js"></script>
+<script src="./js/common/route.js"></script>
+<script src="./js/page/index.js"></script>
+<script src="./js/common/template-web.js"></script>
+<script type="text/template" id="tpl">
+    {{each list v}}
+    <a href="./moneyproduct.html?productid={{v.productId}}" class="goods-product">
+        <div class="product-img">
+            {{@v.productImgSm}}
+        </div>
+        <div class="product-info">
+            <div class="info-title">
+               {{v.productName}}
+                <span>{{v.productPinkage}}</span>
+            </div>
+            <div class="info-other">
+                <span class="mall">{{v.productFrom}}{{v.productTime}}</span>
+                <span class="mall-right">
+                    <i></i>{{v.productComCount.substr(1,1)}}
+                </span>
+            </div>
+        </div>
+    </a>
+    {{/each}}
+</script>
+
+</html>

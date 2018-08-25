@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>国内折扣(主页进)</title>
+  <script src="lib/js/flexible.js"></script>
+  <link rel="stylesheet" href="lib/mui/css/mui.css">
+  <link rel="stylesheet" href="css/common.css">
+  <link rel="stylesheet" href="css/inlanddiscount.css">
+</head>
+
+<body>
+
+
+
+
+  <div class="mb_header">
+    <a href="javascript:history.go(-1)" class="mui-icon mui-icon-arrowleft"></a>
+    <span class="txt">国内折扣</span>
+    <img class="mui-pull-right mb_app" src="images/header_app.png" alt="">
+  </div>
+
+  <div class="mb_content">
+    <ul>
+
+
+
+
+    </ul>
+  </div>
+
+  <div class="mb_footer">
+    <div class="footertop">
+      <a href="javascript:;">登录</a>
+      <a href="javascript:;">注册</a>
+      <a href="#">
+        <span class="mui-icon mui-icon-arrowup"></span>返回顶部</a>
+    </div>
+    <p class="txt">
+      <a href="#" class="red">手机APP下载</a>
+      <a href="#">慢慢买手机版</a>
+      <a href="#" class="grey">--掌上比价平台</a>
+    </p>
+    <p class="wz">m.manmanbuy.com</p>
+  </div>
+
+
+
+
+  <script type="text/html" id="tpl_discount">
+    {{each result v i}}
+    <li>
+        <a href="discount.html?productid={{v.productId}}">
+            {{@v.productImg}}
+            <p class="name mui-ellipsis-2">{{v.productName}}</p>
+            <p class="price mui-ellipsis">{{v.productPrice}}</p>
+            <p class="tips">
+              <span class="org">{{v.productFrom}}|</span>
+              <span class="time">{{v.productTime}}</span>
+            </p>
+        </a>
+      </li>
+    {{/each}}
+    
+  </script>
+
+  <script src="lib/jquery/jquery.min.js"></script>
+  <script src="lib/art-template-master/lib/template-web.js"></script>
+  <script src="lib/mui/js/mui.js"></script>
+  <script src="js/common/Route.js"></script>
+  <script src="js/common/Tools.js"></script>
+  <script src="js/inlanddiscount.js"></script>
+</body>
+
+</html>

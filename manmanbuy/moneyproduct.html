@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>国内折扣</title>
+  <script src="lib/js/flexible.js"></script>
+  <link rel="stylesheet" href="lib/mui/css/mui.css">
+  <link rel="stylesheet" href="css/common.css">
+  <link rel="stylesheet" href="css/moneyproduct.css">
+</head>
+
+<body>
+  <div class="container">
+    <div class="mb_header">
+      <a href="javascript:history.go(-1)" class="mui-icon mui-icon-arrowleft"></a>
+      <span class="txt">国内折扣</span>
+      <img class="mui-pull-right mb_app" src="images/header_app.png" alt="">
+    </div>
+    <div class="mb_content">
+
+      <!-- 挖钱坑 -->
+
+    </div>
+
+    <div class="mb_footer">
+      <div class="footertop">
+        <a href="javascript:;">登录</a>
+        <a href="javascript:;">注册</a>
+        <a href="#">
+          <span class="mui-icon mui-icon-arrowup"></span>返回顶部</a>
+      </div>
+      <p class="txt">
+        <a href="#" class="red">手机APP下载</a>
+        <a href="#">慢慢买手机版</a>
+        <a href="#" class="grey">--掌上比价平台</a>
+      </p>
+      <p class="wz">m.manmanbuy.com</p>
+    </div>
+  </div>
+  <script type="text/html" id="tpl_money">
+    {{each result v i}}
+  
+
+        <h3 class="title">
+          {{v.productName}}</h3>
+        <p class="tips">
+          <span class="org">{{v.productFrom}}</span>
+          <span class="time">{{v.productTime}}</span>
+          <span class="author">{{v.productTips}}</span>
+        </p>
+        <div class="text1 mui-clearfix">
+          <p>{{v.productInfo2}}</p>
+          {{@v.productImgSm}}
+        </div>
+        <p class="text2">
+         {{v.productInfo1}}
+        </p>
+        <p class="bigimg">
+            {{@v.productImgLg}}
+        </p>
+       
+        <div class="city">
+          {{@v.productCity}}
+        </div>
+        <div class="buy">
+          <a href="#">前往购买</a>
+        </div>
+        <div class="erweima">
+          <img src="images/mmbweixin2.png" alt="">
+        </div>
+        <div class="comment">
+          {{@v.productComment}}
+  
+        </div>
+  
+  
+     
+      {{/each}}
+    
+  </script>
+
+  <script src="lib/jquery/jquery.min.js"></script>
+  <script src="lib/art-template-master/lib/template-web.js"></script>
+  <script src="js/common/Route.js"></script>
+  <script src="js/common/Tools.js"></script>
+  <script src="js/moneyproduct.js"></script>
+</body>
+
+</html>

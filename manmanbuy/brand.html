@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>品牌大全</title>
+  <script src="lib/js/flexible.js"></script>
+  <link rel="stylesheet" href="lib/mui/css/mui.css">
+  <link rel="stylesheet" href="css/common.css">
+  <link rel="stylesheet" href="css/brandTitle.css">
+</head>
+
+<body>
+  <div class="container">
+    <div class="mb_header">
+      <img class="mb_logo" src="images/header_logo.png" alt="">
+      <img class="mui-pull-right mb_app" src="images/header_app.png" alt="">
+    </div>
+    <div class="mb_content">
+      <div class="mb_search">
+        <input type="text" placeholder="请输入你想比价的商品" class="mui-pull-left">
+        <button class="mui-pull-right mui-btn mui-btn-yellow">搜索</button>
+      </div>
+      <div class="mb_crumb">
+
+        <a href="index.html">首页&gt;</a>
+        <a href="category.html">全部分类&gt;</a>
+
+      </div>
+      <div class="mb_hot">
+        <div>热门品牌排行</div>
+      </div>
+      <div class="mb_category">
+        <ul class="mui-clearfix">
+          <!-- 分列标题与列表挖坑 -->
+        </ul>
+      </div>
+
+    </div>
+
+
+    <div class="mb_footer">
+      <div class="footertop">
+        <a href="javascript:;">登录</a>
+        <a href="javascript:;">注册</a>
+        <a href="#">
+          <span class="mui-icon mui-icon-arrowup"></span>返回顶部</a>
+      </div>
+      <p class="txt">
+        <a href="#" class="red">手机APP下载</a>
+        <a href="#">慢慢买手机版</a>
+        <a href="#" class="grey">--掌上比价平台</a>
+      </p>
+      <p class="wz">m.manmanbuy.com</p>
+    </div>
+  </div>
+
+  <script type="text/html" id="tpl_brandname">
+    {{each result v i}}
+    <li>
+      <div class="category_title mui-clearfix">
+        <a href="brand.html?brandtitleid={{v.brandTitleId}}" class="mui-pull-left" >{{v.brandTitle}}</a>
+        <span class="mui-icon mui-icon-arrowdown mui-pull-right"></span>
+      </div>
+   </li>
+  {{/each}}
+  </script>
+
+  </script>
+  <script src="lib/jquery/jquery.min.js"></script>
+  <script src="lib/mui/js/mui.js"></script>
+  <script src="lib/art-template-master/lib/template-web.js"></script>
+  <script src="js/common/Route.js"></script>
+  <script src="js/common/Tools.js"></script>
+  <script src="js/brandTitle.js"></script>
+</body>
+
+</html>

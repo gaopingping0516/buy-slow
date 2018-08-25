@@ -1,0 +1,217 @@
+@charset "utf-8";
+/* 初始化 */
+body,
+div,
+ul,
+li,
+ol,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+input,
+textarea,
+select,
+p,
+dl,
+dt,
+dd,
+a,
+img,
+button,
+form,
+table,
+th,
+tr,
+td,
+tbody,
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+menu,
+nav,
+section {
+  margin: 0;
+  padding: 0;
+}
+/* 禁用iPhone中Safari的字号自动调整  */
+html {
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  /* 解决IOS默认滑动很卡的情况 */
+  /* -webkit-overflow-scrolling : touch;  */
+}
+/* 设置HTML5元素为块 */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  font: 12px/1.5 'Microsoft YaHei', '宋体', Tahoma, Arial, sans-serif;
+  color: black;
+  background-color: #F7F7F7;
+}
+/*去除边框*/
+fieldset,
+img,
+input,
+button,
+textarea {
+  border: none;
+  /*去除的蓝色小边框*/
+  outline-style: none;
+}
+/*禁止表单域缩放*/
+textarea {
+  resize: none;
+}
+/* 禁止缩放表单 */
+input[type="submit"],
+input[type="reset"],
+input[type="button"],
+input {
+  resize: none;
+  border: none;
+}
+/* 取消链接高亮  */
+a {
+  text-decoration: none;
+  color: black;
+  /* 取消链接高亮  */
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  font-family: 'Microsoft YaHei', Tahoma, Arial, sans-serif;
+}
+a:hover {
+  text-decoration: none;
+}
+/* 图片自适应 */
+img {
+  width: 100%;
+  height: auto;
+  width: auto\9;
+  /* ie8 */
+  /*解决图片底部对其问题*/
+  display: block;
+  border: none;
+  -ms-interpolation-mode: bicubic;
+  /*为了照顾ie图片缩放失真*/
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-decoration: none;
+  font-weight: normal;
+  font-size: 100%;
+}
+em,
+i {
+  font-style: normal;
+}
+ul,
+li,
+ol {
+  list-style-type: none;
+}
+strong {
+  font-weight: normal;
+}
+/*单行溢出*/
+/*多行溢出 手机端使用*/
+/* 水平垂直居中的公共类 */
+/* 水平居中公共类 */
+/* 垂直居中公共类 */
+html,
+body {
+  /*大容器*/
+}
+html .sn-container,
+body .sn-container {
+  max-width: 750px;
+  min-width: 320px;
+  height: 1000px;
+  margin: 0 auto;
+  background-color: pink;
+  position: relative;
+}
+.bgc {
+  background: #ff841d;
+}
+.bgcolor {
+  background: #f1f1f1;
+}
+.container {
+  max-width: 750px /* 750/50 */;
+  min-width: 320px /* 320/50 */;
+  margin: 0 auto;
+  background: #f1f1f1;
+}
+/*切换显示隐藏类*/
+.dp {
+  display: none;
+}
+.boxborderbottom {
+  border-bottom: 2px solid #f4483e;
+}
+/*底部开始*/
+.bottom {
+  margin-top: 20px;
+  background-color: #efefef;
+}
+/*登录注册返回顶部*/
+.dlzcfh {
+  width: 100%;
+  height: 34px /* 34/50 */;
+  border-top: 1px solid #c4c4c4;
+  border-bottom: 1px solid #c4c4c4;
+}
+.dlzcfh > div {
+  float: left;
+  width: 33.333%;
+  height: 100%;
+  box-sizing: border-box;
+  text-align: center;
+  line-height: 34px /* 34/50 */;
+  font-size: 14px /* 14/50 */;
+}
+.dlzcfh > div > a {
+  color: black;
+}
+.dlzcfh > .dlzcfh-left {
+  border-right: 1px solid #c4c4c4;
+}
+.dlzcfh > .dlzcfh-center {
+  border-right: 1px solid #c4c4c4;
+}
+.dlzcfh > .dlzcfh-right img {
+  width: 15px /* 15/50 */;
+  height: 15px /* 15/50 */;
+  display: inline;
+}
+/*底部最后部分*/
+.footer {
+  padding: 15px 0;
+  box-sizing: border-box;
+  width: 100%;
+  height: 60px /* 60/50 */;
+}
+.footer > p {
+  text-align: center;
+}
+/*底部结束*/

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>moneyctrlljh</title>
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <script src="./js/common/rem.js"></script>
+    <link rel="stylesheet" href="css/app.css" />
+</head>
+
+<body>
+    <div class="container">
+        <!-- 头部公共部分开始 -->
+        <div class="header"></div>
+
+        <!-- 中间部分 -->
+        <div class="goods" id="goodsColor"></div>
+
+        <!-- 下面的下拉框和按钮 -->
+        <div class="selectBtn">
+            <div class="pageUp">
+                <a href="javascript:;">上一页</a>
+            </div>
+            <div class="selectBox">
+                <select id="selectPage">
+                    <option value="">1/15</option>
+                    <option value="1">2/15</option>
+                    <option value="2">3/15</option>
+                    <option value="3">4/15</option>
+                    <option value="4">5/15</option>
+                    <option value="5">6/15</option>
+                    <option value="6">7/15</option>
+                    <option value="7">8/15</option>
+                    <option value="8">9/15</option>
+                    <option value="9">10/15</option>
+                    <option value="10">11/15</option>
+                    <option value="11">12/15</option>
+                    <option value="12">13/15</option>
+                    <option value="13">14/15</option>
+                    <option value="14">15/15</option>
+                </select>
+            </div>
+
+            <div class="pageDown">
+                <a href="javascript:;">下一页</a>
+            </div>
+        </div>
+
+        <!-- 底部公共部分开始 -->
+        <div class="bottom"></div>
+    </div>
+    <script src="./js/common/jquery-1.12.4.js"></script>
+    <script src="./js/common/HeaderAndFooter.js"></script>
+    <script src="./js/common/route.js"></script>
+    <script src="./js/common/template-web.js"></script>
+    <script src="./js/page/moneyctrl.js"></script>
+    <script type="text/template" id="tpl">
+        {{each list v}}
+        <a href="moneyproduct.html?productid={{ v.productId }}" class="goods-product">
+            <div class="product-img">
+                {{@v.productImgSm}}
+            </div>
+            <div class="product-info">
+                <div class="info-title">
+                    {{v.productName}}
+                    <span>{{v.productPinkage}}</span>
+                </div>
+                <div class="info-other">
+                    <span class="mall">{{v.productFrom}}{{v.productTime}}</span>
+                    <span class="mall-right" id="mall-right">
+                        <i></i>{{v.productComCount.substr(1,1)}}
+                    </span>
+                </div>
+            </div>
+        </a>
+        {{/each}}
+    </script>
+</body>
+
+</html>

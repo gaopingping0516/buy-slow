@@ -1,0 +1,202 @@
+@import "variable";
+@import "normalize";
+@import "common";
+
+.mb_header {
+  position: relative;
+  background-color: #f4483e !important;
+  .mui-icon-arrowleft {
+    position: absolute;
+    color: #fff;
+    left: .266667rem;
+    top: .32rem;
+    font-size: .866667rem;
+  }
+  .txt {
+    position: absolute;
+    color: #fff;
+    font-size: .56rem;
+    left: 2.8rem;
+    top: .346667rem;
+    font-weight: 700;
+  }
+}
+
+.mb_nav {
+  width: 100%;
+  height: 1.066667rem;
+  background-color: #fff;
+  overflow: hidden;
+  position: relative;
+  ul {
+    // width: 200%;
+    overflow: hidden;
+    padding-left: .293333rem;
+    li {
+      float: left;
+      height: 1.066667rem;
+      padding-top: .293333rem;
+      padding-bottom: .4rem;
+      font-size: .373333rem;
+      margin-right: .626667rem;
+      border-bottom: 2px solid #fff;
+      a {
+        width: 100%;
+        height: .733333rem;
+        font-size: .4rem;
+        display: block;
+      }
+    }
+    a.now {
+      color: #f4483e;
+      border-bottom: 2px solid #f4483e;
+    }
+   
+  }
+  .search {
+    width: 1rem;
+    height: .96rem;
+    position: absolute;
+    right: 0;
+    top: 0;
+    text-align: center;
+    line-height: .76rem;
+    background-color: #fbfbfb;
+    z-index: 999;
+    span {
+      font-size: .533333rem;
+    }
+  }
+  
+}
+
+.mb_product {
+  background-color: #fff;
+
+
+  .list {
+    width: 100%;
+    height: 4.093333rem;
+    border-top: .08rem solid #ccc;
+    padding: .266667rem .16rem;
+    img {
+      width: 3.466667rem;
+      height: 3.466667rem;
+    }
+    .right {
+      width: 6.066667rem;
+      .name {
+        font-size: .32rem;
+        height: .933333rem;
+      }
+      .price {
+        margin-top: .346667rem;
+        color: red;
+        font-size: .533333rem;
+        i {
+          font-style: normal;
+          color: red;
+          font-size: .4rem;
+        }
+        em {
+          font-style: normal;
+          color: red;
+          margin-left: .133333rem;
+        }
+        del {
+          margin-left:.4rem;
+        }
+      }
+      .percent {
+        width: 100%;
+        height: .4rem;
+     
+        position: relative;
+        margin-top: .266667rem;
+        i {
+          width: 2.24rem;
+          height: .4rem;
+          border-radius: .2rem;
+          border: 1px solid red;
+          font-size: .373333rem;
+          color: white;
+          display: inline-block;
+          position: absolute;
+          font-weight: normal;
+          overflow: hidden;
+          background-color:pink;
+          em {
+            display: inline-block;
+            background-color: red;
+            height: .386667rem;
+            border-radius: .186667rem;
+            font-weight: normal;
+          }
+          span {
+            color: white;
+            font-weight: 700;
+            position: absolute;
+            top: 0;
+            left: .933333rem;
+            font-size: .186667rem;
+            line-height: .4rem;
+            font-weight: normal;
+          }
+        }
+        b {
+         font-weight: 400;
+          font-size: .186667rem;
+          color: red;
+          position: absolute;
+          left: 2.533333rem;
+        }
+      }
+      .target {
+        width: 100%;
+        height: .826667rem;
+        margin-top: .24rem;
+        overflow: hidden;
+        a:first-child {
+          color: #f4483e;
+          display: inline-block;
+          width: 2.933333rem;
+          height: .693333rem;
+          border: 1px dashed #f4483e;
+          line-height: .693333rem;
+          text-align: center;
+          float: left;
+        }
+        a:last-child {
+          width: 1.546667rem;
+          height: .746667rem;
+          border-radius: .133333rem;
+          background-color: #f4483e;
+          color: white;
+          text-align: center;
+          line-height: .773333rem;
+          display: inline-block;
+          float: right;
+        }
+      }
+    }
+  }
+}
+
+.mb_up {
+  width: 1.093333rem;
+  height: 1.093333rem;
+  border-radius: 50%;
+  border: 1px solid #ccc;
+  background-color: #7f7f7f;
+  position: fixed;
+  right: .133333rem;
+  bottom: .266667rem;
+  display: block;
+  font-size: .8rem;
+  font-weight: 700;
+  text-align: center;
+}
+
+
+
+

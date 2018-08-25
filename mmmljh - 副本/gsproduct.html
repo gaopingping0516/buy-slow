@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>couponljh</title>
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <script src="./js/common/rem.js"></script>
+    <link rel="stylesheet" href="css/app.css" />
+</head>
+
+<body>
+    <div class="container">
+        <!-- 头部公共部分开始 -->
+        <div class="header"></div>
+        <!-- 下拉框部分 -->
+        <div class="selectArea">
+            <div class="right-icon"></div>
+            <div class="selectBox">
+                <div class="select-dian">京东
+                    <i></i>
+                </div>
+                <div class="select-quyu">华北
+                    <i></i>
+                </div>
+                <div class="select-jiage">全部价格
+                    <i class="sji"></i>
+                </div>
+            </div>
+            <!-- 各种下拉 -->
+            <div class="xiala-first">
+                <ul>
+
+                </ul>
+            </div>
+            <div class="xiala-second">
+                <ul>
+
+                </ul>
+            </div>
+        </div>
+
+        <!-- 主体内容部分 -->
+        <div class="gs-container">
+            
+
+        </div>
+
+
+        <!-- 底部公共部分开始 -->
+        <div class="bottom"></div>
+    </div>
+    <script src="./js/common/jquery-1.12.4.js"></script>
+    <script src="./js/common/HeaderAndFooter.js"></script>
+    <script src="./js/common/route.js"></script>
+    <script src="./js/common/template-web.js"></script>
+    <script src="./js/page/gsproduct.js"></script>
+    <script type="text/template" id="tpl">
+        {{each list v}}
+        <li>
+            <a href="#" shopId="{{v.shopId}}" class="chooseShop">{{v.shopName}}
+
+            </a>
+        </li>
+        {{/each}}
+    </script>
+
+
+    <script type="text/template" id="tmp">
+        {{each list v}}
+        <li>
+            <a href="#" areaId="{{v.areaId}}" class="chooseArea">{{v.areaName}}
+
+            </a>
+        </li>
+        {{/each}}
+    </script>
+
+    <script type="text/template" id="tplgetgsproduct">
+        {{each list v}}
+        <div class="gs-goods">
+            <a href="#">
+                <div class="pic">
+                    <img src={{@v.productImg}}>
+                </div>
+                <div class="goods-info">
+                    {{v.productName}}
+                </div>
+                <div class="goods-ohter">
+                    <div class="goods-price">{{v.productPrice}}</div>
+                    <div class="goods-coudan">去凑单</div>
+                </div>
+            </a>
+        </div>
+        {{/each}}
+    </script>
+
+</body>
+
+</html>

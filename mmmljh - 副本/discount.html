@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>productlistljh</title>
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <script src="./js/common/rem.js"></script>
+    <link rel="stylesheet" href="css/app.css" />
+</head>
+
+<body>
+    <!-- 包内容的大盒子 -->
+    <div class="container" id="container-box">
+
+        <!-- 头部公共部分开始 -->
+        <div class="header"></div>
+        <!-- 头部公共部分结束 -->
+
+        <!-- 上面图文部分 -->
+        <div class="gn-goods">
+            <!-- 国内商品信息在模板引擎里 -->
+        </div>
+
+        <!-- 前往购买 -->
+        <div class="golink">
+            <a href="redirect.aspx?tjid=521575&amp;y=cu_share" target="_blank">
+                <i class="icon-gobuy"></i>前往购买</a>
+        </div>
+
+        <!-- 大图 -->
+        <div style="text-align: center; margin: 20px 10px;">
+            <img src="images/mmbweixin2.png" style="width: 100%; height: auto;">
+        </div>
+
+        <!-- 发表评论在模板里 -->
+       
+        <!-- 评论的内容 -->
+        <div class="pinglun-list">
+
+        </div>
+
+
+        <!-- 最新评论 -->
+        <!-- <div class="tit">
+                最新评论
+            </div> -->
+    </div>
+
+
+
+
+
+    <!-- 底部公共部分开始 -->
+    <div class="bottom"></div>
+    <!-- 底部公共部分结束 -->
+
+    </div>
+
+</body>
+<script src="./js/common/jquery-1.12.4.js"></script>
+<script src="./js/common/HeaderAndFooter.js"></script>
+<script src="./js/common/route.js"></script>
+<script src="./js/page/discount.js"></script>
+<script src="./js/common/template-web.js"></script>
+<script type="text/template" id="tpl">
+    <h2>
+        {{productName}}
+    </h2>
+    <div class="gn-infos">
+        <span class="gn-mall">{{productFrom}}</span>
+        <span class="gn-addtime" style="margin-right: 4px;">{{productTime}}</span>
+        <span class="gn-author">{{productTips}}</span>
+    </div>
+    <div class="gn-content">
+        <div class="content-pic">
+                <img src="http://cacheimg.manmanbuy.com/r_img/cacheimg.aspx?width=600&amp;imgurl=j_sources/img/2016/10/24/190_190_0_36618798b6e1a98d9f4ae8f7a195f41b.jpg" alt="新低价：MTG Style 系列 中性 Body Make Seat Style 脊椎护腰坐垫">
+        </div>
+        <p class="content-wenzi">{{productInfo}}</p>
+        <p class="content-wenzi">{{productInfo1}}</p>
+    </div>
+    <div class="main-pic">
+        {{@productImg}}
+    </div>
+    <!-- 国内货源情况 -->
+
+   
+
+   
+
+
+</script>
+
+<script type="text/template" id="tmp">
+    
+            {{@productComment}}
+        
+</script>
+
+</html>

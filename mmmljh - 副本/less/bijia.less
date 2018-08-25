@@ -1,0 +1,180 @@
+@import "./base.less";
+
+/*大图和标题*/
+
+.bj-info {
+    background-color: white;
+    >.bj-info-title {
+        height: 180px;
+        padding: 20px;
+        text-align: center;
+        font-size: 16px;
+        box-sizing: border-box;
+    }
+    >.bj-info-img {
+        position: relative;
+        height: 190px;
+        padding-bottom: 20px;
+        box-sizing: border-box;
+        >a {
+            display: inline-block;
+            width: 100%;
+            height: 100%;
+            >img {
+                width: 170px;
+                height: 170px;
+                margin: 0 auto;
+            }
+        }
+    }
+    .product-collect {
+        position: absolute;
+        width: 39px;
+        height: 39px;
+        border-radius: 50%;
+        right: 20px;
+        bottom: 20px;
+        >a {
+            width: 100%;
+            height: 100%;
+            display: inline-block;
+        }
+        >img {
+            width: 100%;
+            height: 100%;
+        }
+    }
+    .p_pic{
+        width:40px;
+        padding-top: 5px;
+        a{
+            display: inline-block;
+            width:100%;
+            height: 100%;
+            >img{
+                width: 16px;
+                height: 16px;
+                margin-left:20px; 
+            }
+        }
+    }
+    .red{
+        .fr();
+        padding-top: 2px;
+        margin-right: 10px;
+        color: #d10311;
+    text-align: right;
+    font-size: 16px;
+    }
+}
+
+
+/*比价购买，产品参数，评价*/
+
+
+
+
+/*价格，店铺*/
+.price-shop {
+    height: 50px;
+    background-color: white;
+    border-bottom:1px solid #ccc; 
+    >div {
+        line-height: 50px;
+        font-size: 14px;
+    }
+    >.shop-tubiao {
+        height: 50px;
+        .fl();
+        width: 32px;
+        >a {
+            width: 100%;
+            height: 100%;
+            display: inline-block;
+            >img {
+                margin: 17px auto;
+                width: 16px;
+                height: 16px;
+            }
+        }
+    }
+    >.shop-nameprice {
+        margin-left: 32px;
+        margin-right: 60px;
+        >.shop-name {
+            .fl();
+            .w50();
+            font-size: 16px;
+        }
+        >.sales-price {
+            .fr();
+            .w50();
+            text-align: right;
+            padding-right: 20px;
+            box-sizing: border-box;
+            color: #d10311;
+            font-size: 16px;
+        }
+    }
+    >.go-shopping {
+        width: 60px;
+        .fr();
+        >button {
+            width: 56px;
+            height: 24px;
+            line-height: 24px;
+            background-color: #ff5500;
+            color: #fff;
+            font-size: 14px;
+            border-radius:5px; 
+        }
+    }
+}
+
+/*注意事项*/
+.note{
+    background-color: white;
+    padding: 10px;
+    box-sizing: border-box;
+    line-height: 20px;
+    color: #888;
+    
+}
+
+/*网友评价*/
+.wangyoupingjia{
+    height: 34px;
+    border-top:4px solid #7a7a7a;
+    background-color: #dbdbdb;
+    line-height: 34px;
+    text-align: center;
+    line-height: 34px;
+    font-size: 14px;
+}
+
+
+/*评价具体内容*/
+.pingjia-container{
+    background-color: white;
+    >.pingjia{
+        padding:10px;
+        border-bottom: 1px solid #ccc;
+        >.pingjia-once-info{
+            .clearfix();
+            color: #666;
+            .shoujihao{
+                .fl();
+            } 
+            .pingjia-time{
+                .fr();
+            }
+        }
+        .come-form{
+            .clearfix();
+            color: #666;
+            span{
+                .fr();
+            }
+        }
+    }
+}

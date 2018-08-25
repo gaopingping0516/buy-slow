@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="lib/js/flexible.js"></script>
+  <link rel="stylesheet" href="lib/mui/css/mui.css">
+  <link rel="stylesheet" href="css/common.css">
+  <link rel="stylesheet" href="css/index.css">
+</head>
+
+<body>
+  <div class="container">
+    <div class="mb_header">
+      <img class="mb_logo" src="images/header_logo.png" alt="">
+      <img class="mui-pull-right mb_app" src="images/header_app.png" alt="">
+    </div>
+    <div class="mb_content">
+      <div class="mb_search">
+        <input type="text" placeholder="请输入你想要的商品" class="mui-pull-left">
+        <button class="mui-pull-right mui-btn mui-btn-yellow">搜索</button>
+      </div>
+      <div class="mb_menu mui-clearfix">
+        <ul>
+            <!-- 菜单挖坑 -->
+        </ul>
+      </div>
+      <div class="mb_recommend">
+        <div class="title mui-clearfix">
+          <div class="txt mui-pull-left">超值折扣推荐</div>
+          <img src="images/more.png" class="mui-pull-right" alt="">
+        </div>
+        <ul class="recPro ">
+         <!-- 折扣挖坑 -->
+        </ul>
+        <div class="more">
+          <a href="moneyctrl.html">更多优惠信息>></a>
+        </div>
+      </div>
+      <div class="mb_brand mui-clearfix">
+        <div class="mui-pull-left">品牌排行</div>
+        <img src="images/more.png" class="mui-pull-right" alt="">
+      </div>
+    </div>
+    <div class="mb_footer">
+      <div class="footertop">
+        <a href="javascript:;">登录</a>
+        <a href="javascript:;">注册</a>
+        <a href="#"><span class="mui-icon mui-icon-arrowup"></span>返回顶部</a>
+      </div>
+      <p class="txt">
+        <a href="#" class="red">手机APP下载</a>
+        <a href="#" >慢慢买手机版</a>
+        <a href="#" class="grey">--掌上比价平台</a>
+      </p>
+     <p class="wz">m.manmanbuy.com</p>
+    </div>
+  </div>
+  <script type="text/html" id="tpl_discount">
+    {{each result v i}}
+    <li class="mui-clearfix">
+        <a href="moneyproduct.html?productid={{v.productId}}">
+          <div class="pro_left mui-pull-left">
+            {{#v.productImgLg}}
+          </div>
+          <div class="pro_right">
+            <p class="proName">{{v.productName}}
+              <span class="price">{{v.productPinkage}}</span>
+            </p>
+            <div class="other">
+              <span class="mall">{{v.productFrom}} | {{v.productTime}}</span>
+              <span class="comment mui-pull-right">
+                <i class="mui-icon   mui-icon-chat"></i>
+                {{(v.productComCount).slice(1,2)}}
+              </span>
+            </div>
+          </div>
+        </a>
+      </li>
+      {{/each}}
+  </script>
+  <script type="text/html" id="tpl_menu">
+    {{each result v i}}
+    <li data-id="{{v.indexmenuId}}">
+        <a href="{{v.titlehref}}">
+          {{@v.img}}
+          <p>{{v.name}}</p>
+        </a>
+    </li>
+    {{/each}}
+  </script>
+  <script src="lib/jquery/jquery.min.js"></script>
+  <script src="lib/art-template-master/lib/template-web.js"></script>
+  <script src="js/common/Route.js"></script>
+  <script src="js/common/Tools.js"></script>
+  <script src="js/index.js"></script>
+</body>
+
+</html>

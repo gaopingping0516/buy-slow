@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>baicaijialjh</title>
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <script src="./js/common/rem.js"></script>
+    <link rel="stylesheet" href="css/app.css" />
+</head>
+
+<body>
+    <div class="container">
+        <!-- 头部公共部分开始 -->
+        <div class="header" id="redHeader" style="background: #f4483e;"></div>
+        <!-- 导航条 -->
+        <div class="top-nav">
+            <div class="top-pic"></div>
+            <div class="nav-ul">
+                <ul>
+                    
+                </ul>
+            </div>
+        </div>
+        <div id="indicator">  
+            <div id="dotty"></div>  
+        </div>  
+        <!-- 主体内容部分 -->
+        <div class="bcj-center">
+
+        </div>
+        <!-- 底部公共部分开始 -->
+        <div class="bottom"></div>
+    </div>
+    <script src="./js/common/jquery-1.12.4.js"></script>
+    <script src="./js/common/HeaderAndFooter.js"></script>
+    <script src="./js/common/route.js"></script>
+    <script src="./js/common/template-web.js"></script>
+    <script src="./js/common/iscroll.js"></script>
+    <!--<script src="./js/common/Tools.js"></script>-->
+    <script src="./js/page/baicaijia.js"></script>
+
+    <script type="text/template" id="tpl">
+        {{each result v}}
+        <li>
+            <a href="#" data-id={{v.titleId}}>{{v.title}}</a>
+        </li>
+        {{/each}}
+    </script>
+
+    <script type="text/template" id="tmp">
+        {{each result v}}
+        <div class="bcj-kuang">
+            <div class="goods-content">
+                <a href="#"></a>
+                <!--用于点击到具体的详情页的 -->
+                <div class="goods-img">
+                   {{@v.productImg}}
+                </div>
+                <div class="goods-info">
+                    <div class="goods-title">{{@v.productName}}</div>
+                    <div class="goods-price">
+                        {{@v.productPrice}}
+                    </div>
+                    <a href="#"></a>
+                    <!--用于点击的领券的 -->
+                    <div class="goods-progress">
+                        <span>
+                            <i>1%</i>
+                            <em class="baifen"></em>
+                        </span>
+                        <em>已领82张</em>
+                    </div>
+                    <div class="goods-bottom">
+                        <div class="xiadanlianjie">
+                            {{@v.productHref}} 
+                        </div>
+                        <div class="goods-youhuiquan">
+                            
+                            {{@v.productCoupon}}             
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        {{/each}}
+    </script>
+</body>
+
+</html>

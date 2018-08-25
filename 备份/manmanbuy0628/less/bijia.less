@@ -1,0 +1,228 @@
+@import "variable";
+@import "normalize";
+@import "common";
+div,p,li {
+  box-sizing: border-box;
+}
+
+.mb_content {
+  background-color: #fff;
+}
+
+.mb_search {
+  width: 100%;
+ height: 100/75rem;
+ padding: 20/75rem;
+ background-color: #fff;
+ input {
+   width: 80%;
+   height: 60/75rem;
+   border: 1px solid #ccc;
+   border-radius: 30/75rem;
+   background-color: #f1f1f1;
+  padding-left: .533333rem /* 40/75 */;
+  font-size:.266667rem /* 20/75 */;
+  margin-bottom: 0;
+  
+ }
+ button {
+   width: 15%;
+   height: 60/75rem;
+   border-radius: .4rem ;/* 30/75 */
+   background-color: @mColor;
+  font-size: .266667rem /* 20/75 */
+
+ }
+}
+
+.mb_crumb {
+  width: 100%;
+  height: 1.04rem;
+  line-height: 0.9rem;
+  border-top:1px solid #ccc;
+  border-bottom:1px solid #ccc;
+  background: linear-gradient(to bottom ,white, #ccc);
+  padding-left: .133333rem;
+  padding-right: .133333rem;
+  a {
+    font-size: .266667rem;
+  }
+  div {
+    width: 1.706667rem;
+    height: .8rem;
+    font-size: .266667rem;
+    margin-top: .133333rem;
+    line-height: .8rem;
+    border: 1px solid #ccc;
+    border-radius: .266667rem;
+    background: linear-gradient(to bottom, #ccc, #fff);
+    text-align: center;
+  }
+
+}
+
+.mb_product {
+  width: 100%;
+  height: 6.733333rem;
+  background-color: #fff;
+  text-align: center;
+  position: relative;
+  .product_title {
+    width: 100%;
+    height: 2.133333rem;
+    font-size: .4rem;
+    padding: .56rem;
+    line-height: 0.5rem;
+  }
+  .product_img img {
+    width: 4rem;
+    height: 4rem;
+  }
+  .product_collect img {
+    width: 1.04rem;
+    height: 1.053333rem;
+    position: absolute;
+    right: .626667rem;
+    bottom: .533333rem;
+  }
+}
+
+.mb_tab {
+  width: 100%;
+  height: .933333rem;
+  background-color: pink;
+  border-top: 1px solid #b32b00;
+  border-bottom: 1px solid #b32b00;
+  li {
+    width: 33.33%;
+    float: left;
+    text-align: center;
+    line-height: .833333rem;
+    border-right: 1px solid #b32b00;
+    
+    a {
+      font-size: .4rem;
+      color: #fff;
+    }
+  }
+  li:nth-child(1) {
+    background-color: #ff9812;
+  }
+  li:nth-child(2) {
+    background-color:#ffc31c;
+  }
+  li:nth-child(3) {
+    background-color: #ffc31c;
+  }
+}
+
+.mb_table {
+  width: 100%;
+  height: 1.2rem;
+  border-bottom: 1px solid #ccc;
+  border-top: 1px solid #ccc;
+  background-color: #fff;
+  padding-left: .44rem;
+  padding-top: .4rem;
+  position: relative;
+  td>a {
+    font-size: .4rem;
+    position: absolute;
+    left: .666667rem;
+    top: .333333rem;
+  }
+
+    .p_pic img {
+      width: .44rem;
+      height: .44rem;
+      // vertical-align: middle;
+      position: absolute;
+      left: -0.466667rem;
+      top: 2px;
+
+    }
+   
+    
+  
+  
+  .red {
+    color: red;
+    font-size: .4rem;
+    position: absolute;
+    right: 1.8rem ;
+    top: .333333rem;
+
+  }
+  td>span {
+    position: absolute;
+    right: 0.1rem ;
+    top: .333333rem;
+  }
+
+}
+
+.note {
+  color:@txtColor;
+  font-size: .266667rem;
+  height: 1.573333rem;
+  // line-height:  1.573333rem;
+  padding: .266667rem;
+  background-color: #fff;
+}
+.comment_title {
+  width: 100%;
+  height: .84rem;
+  background:linear-gradient(to bottom, white,#ccc);
+  text-align: center;
+  line-height: .84rem;
+  font-size: .4rem;
+  border-top: 3px solid #757575;
+}
+.comment {
+
+  .content {
+    background-color: #fff;
+    border-bottom: 1px solid #ccc;
+    width: 100%;
+    padding: .4rem .266667rem;
+    .top {
+      font-size: .16rem;
+      color: #ccc;
+      position: relative;
+
+      span {
+        font-size: .16rem;
+      color: #ccc;
+      position: absolute;
+      right: .266667rem;
+      }
+      p {
+        margin-bottom: 0;
+        font-size: .16rem;
+      }
+    }
+    .bot {
+      font-size: .186667rem;
+    }
+  }
+}
+.comment_footer {
+  height: 2rem;
+  background: #fff;
+  padding-top:  .4rem;
+  padding-left: .24rem;
+  padding-right: .24rem;
+  p {
+    width: 100%;
+    height: .84rem;
+    border: 1px solid #ccc;
+    border-radius: .133333rem;
+    text-align: center;
+    line-height: .84rem;
+    background:linear-gradient(to bottom, white,#ccc);
+    color: black;
+    font-size: 0.3rem;
+   
+  }
+}
+

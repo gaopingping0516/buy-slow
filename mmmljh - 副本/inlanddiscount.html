@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>moneyctrlljh</title>
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <script src="./js/common/rem.js"></script>
+    <link rel="stylesheet" href="css/app.css" />
+</head>
+
+<body>
+    <div class="container">
+        <!-- 头部公共部分开始 -->
+        <div class="header"></div>
+
+        <!-- 中间部分开始 -->
+        <div class="discount-goods"></div>
+
+        <!-- 底部公共部分开始 -->
+        <div class="bottom"></div>
+    </div>
+    <script src="./js/common/jquery-1.12.4.js"></script>
+    <script src="./js/common/HeaderAndFooter.js"></script>
+    <script src="./js/common/route.js"></script>
+    <script src="./js/common/template-web.js"></script>
+    <script src="./js/page/inlanddiscount.js"></script>
+    <script type="text/template" id="tpl">
+        {{each list v}}
+        <div class="goods-left">
+            <a href="./discount.html?productid={{v.productId}}">
+                {{@v.productImg}}
+                <div class="goods-title">{{v.productName}}</div>
+                <div class="goods-price">{{v.productPrice}}</div>
+                <div class="goods-info">{{v.productFrom}}|{{v.productTime}} 10-22 13:28</div>
+            </a>
+        </div>
+        {{/each}}
+
+</script>
+</body>
+    
+</body>
+
+</html>

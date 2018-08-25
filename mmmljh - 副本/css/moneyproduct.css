@@ -1,0 +1,333 @@
+@charset "utf-8";
+/* 初始化 */
+body,
+div,
+ul,
+li,
+ol,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+input,
+textarea,
+select,
+p,
+dl,
+dt,
+dd,
+a,
+img,
+button,
+form,
+table,
+th,
+tr,
+td,
+tbody,
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+menu,
+nav,
+section {
+  margin: 0;
+  padding: 0;
+}
+/* 禁用iPhone中Safari的字号自动调整  */
+html {
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  /* 解决IOS默认滑动很卡的情况 */
+  /* -webkit-overflow-scrolling : touch;  */
+}
+/* 设置HTML5元素为块 */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  font: 12px/1.5 'Microsoft YaHei', '宋体', Tahoma, Arial, sans-serif;
+  color: black;
+  background-color: #F7F7F7;
+}
+/*去除边框*/
+fieldset,
+img,
+input,
+button,
+textarea {
+  border: none;
+  /*去除的蓝色小边框*/
+  outline-style: none;
+}
+/*禁止表单域缩放*/
+textarea {
+  resize: none;
+}
+/* 禁止缩放表单 */
+input[type="submit"],
+input[type="reset"],
+input[type="button"],
+input {
+  resize: none;
+  border: none;
+}
+/* 取消链接高亮  */
+a {
+  text-decoration: none;
+  color: black;
+  /* 取消链接高亮  */
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  font-family: 'Microsoft YaHei', Tahoma, Arial, sans-serif;
+}
+a:hover {
+  text-decoration: none;
+}
+/* 图片自适应 */
+img {
+  width: 100%;
+  height: auto;
+  width: auto\9;
+  /* ie8 */
+  /*解决图片底部对其问题*/
+  display: block;
+  border: none;
+  -ms-interpolation-mode: bicubic;
+  /*为了照顾ie图片缩放失真*/
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-decoration: none;
+  font-weight: normal;
+  font-size: 100%;
+}
+em,
+i {
+  font-style: normal;
+}
+ul,
+li,
+ol {
+  list-style-type: none;
+}
+strong {
+  font-weight: normal;
+}
+/*单行溢出*/
+/*多行溢出 手机端使用*/
+/* 水平垂直居中的公共类 */
+/* 水平居中公共类 */
+/* 垂直居中公共类 */
+html,
+body {
+  /*大容器*/
+}
+html .sn-container,
+body .sn-container {
+  max-width: 750px;
+  min-width: 320px;
+  height: 1000px;
+  margin: 0 auto;
+  background-color: pink;
+  position: relative;
+}
+.bgc {
+  background: #ff841d;
+}
+.bgcolor {
+  background: #f1f1f1;
+}
+.container {
+  max-width: 750px /* 750/50 */;
+  min-width: 320px /* 320/50 */;
+  margin: 0 auto;
+  background: #f1f1f1;
+}
+/*切换显示隐藏类*/
+.dp {
+  display: none;
+}
+.boxborderbottom {
+  border-bottom: 2px solid #f4483e;
+}
+#container-box {
+  /*上面图文部分*/
+  background-color: white;
+  /*前往购买*/
+  /*发表评论*/
+  /*最新评论*/
+  /*评论的内容*/
+}
+#container-box .gn-goods {
+  margin: 10px;
+}
+#container-box .gn-goods h2 {
+  font-size: 20px;
+  font-weight: 700;
+  text-align: center;
+  margin: 15px;
+}
+#container-box .gn-goods .gn-infos {
+  color: #999999;
+  margin: 15px;
+}
+#container-box .gn-goods .gn-content .content-wenzi {
+  margin-right: 120px;
+  line-height: 24px;
+  color: #606060;
+  font-size: 16px;
+}
+#container-box .gn-goods .gn-content .content-pic {
+  float: right;
+}
+#container-box .gn-goods .gn-content .content-pic > img {
+  width: 120px;
+  height: 120px;
+  margin-top: 10px;
+  margin-left: 10px;
+}
+#container-box .gn-goods .main-pic {
+  margin-top: 10px;
+}
+#container-box .gn-goods .main-pic > img {
+  max-width: 360px;
+}
+#container-box .gn-goods .goods-city {
+  margin: 30px;
+}
+#container-box .gn-goods .goods-city > .goods-row {
+  width: 136px;
+  box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.1);
+  border-color: #f1f1f1 #f1f1f1 #dbdbdb #f1f1f1;
+  border-width: 0px 1px 1px 1px;
+  border-style: solid;
+  margin: 0 auto;
+}
+#container-box .gn-goods .goods-city li {
+  text-align: center;
+  height: 21px;
+  border-bottom: 1px dashed #ccc;
+  line-height: 21px;
+}
+#container-box .gn-goods .goods-city li span {
+  width: 116px;
+  display: inline-block;
+  text-align: left;
+}
+#container-box .gn-goods .goods-city li span strong {
+  color: #f27b04;
+  float: right;
+}
+#container-box .golink {
+  margin: 0 30px;
+  height: 30px;
+  background-color: #FF9000;
+  border-radius: 5px;
+  font-size: 14px;
+  text-align: center;
+  line-height: 30px;
+}
+#container-box .golink > a {
+  color: white;
+}
+#container-box .tit {
+  margin: 0 30px;
+  font-size: 16px;
+}
+#container-box .form {
+  margin: 0 20px;
+  border: 1px solid #ccc;
+}
+#container-box .form textarea {
+  width: 100%;
+  height: 100%;
+  font-size: 14px;
+  outline: 0;
+  color: #666;
+  height: 68px;
+}
+#container-box .ctrl {
+  height: 36px;
+  border-top: 1px solid #ccc;
+}
+#container-box .ctrl > input {
+  width: 100px;
+  height: 36px;
+  background: #ff841d;
+  text-align: center;
+  line-height: 36px;
+  color: white;
+  float: right;
+}
+#container-box .tit {
+  margin: 30px;
+  margin-bottom: 15px;
+  font-size: 16px;
+}
+#container-box .cu-content-pl .list ul li {
+  padding: 18px 10px;
+  background-color: #FFFFFF;
+}
+#container-box .cu-content-pl .list ul li .userimg {
+  width: 40px;
+  height: 40px;
+  float: left;
+}
+#container-box .cu-content-pl .list ul li .userimg img {
+  width: 100%;
+  height: 100%;
+}
+#container-box .cu-content-pl .list ul li .con {
+  margin-left: 55px;
+}
+#container-box .cu-content-pl .list ul li .con .name {
+  height: 25px;
+  zoom: 1;
+}
+#container-box .cu-content-pl .list ul li .con .name:after {
+  content: "";
+  display: block;
+  visibility: hidden;
+  height: 0;
+  clear: both;
+}
+#container-box .cu-content-pl .list ul li .con .name > .username {
+  color: #5997c0;
+  font-size: 13px !important;
+  float: left;
+}
+#container-box .cu-content-pl .list ul li .con .name > .time {
+  color: #999999;
+  font-size: 13px !important;
+  float: right;
+}
+#container-box .cu-content-pl .list ul li .con .content {
+  word-break: break-all;
+  font-size: 15px !important;
+  color: #606060;
+  line-height: 20px;
+}
+#container-box .cu-content-pl .list ul li .con .content > img {
+  width: 22px;
+  height: 22px;
+  display: inline-block;
+}

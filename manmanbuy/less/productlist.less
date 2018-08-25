@@ -1,0 +1,128 @@
+@import "variable";
+@import "normalize";
+@import "common";
+div,p,li {
+  box-sizing: border-box;
+}
+
+.mb_content {
+  background-color: #fff;
+}
+
+.mb_search {
+  width: 100%;
+ height: 100/75rem;
+ padding: 20/75rem;
+ background-color: #fff;
+ input {
+   width: 80%;
+   height: 60/75rem;
+   border: 1px solid #ccc;
+   border-radius: 30/75rem;
+   background-color: #f1f1f1;
+  padding-left: .533333rem /* 40/75 */;
+  font-size:.266667rem /* 20/75 */;
+  margin-bottom: 0;
+  
+ }
+ button {
+   width: 15%;
+   height: 60/75rem;
+   border-radius: .4rem ;/* 30/75 */
+   background-color: @mColor;
+  font-size: .266667rem /* 20/75 */
+
+ }
+}
+
+.mb_crumb {
+  width: 100%;
+  height: 1.04rem;
+  line-height: 0.9rem;
+  border-top:1px solid #ccc;
+  border-bottom:1px solid #ccc;
+  background: linear-gradient(to bottom ,white, #ccc);
+  padding-left: .133333rem;
+  padding-right: .133333rem;
+  a {
+    font-size: .266667rem;
+  }
+  div {
+    width: 1.706667rem;
+    height: .8rem;
+    font-size: .266667rem;
+    margin-top: .133333rem;
+    line-height: .8rem;
+    border: 1px solid #ccc;
+    border-radius: .266667rem;
+    background: linear-gradient(to bottom, #ccc, #fff);
+    text-align: center;
+  }
+
+}
+
+.mb_productlist {
+  width: 100%;
+ 
+  .product {
+    width: 100%;
+    height: 3.133333rem;
+    border-bottom: 1px solid #ccc;
+    padding: .133333rem;
+    .left {
+      img {
+        width: 2.666667rem;
+        height: 2.666667rem;
+      }
+    }
+    .right {
+      overflow: hidden;
+      padding-left: .266667rem;
+      padding-right: .266667rem;
+      .productName {
+        font-size: .213333rem;
+        color:black;
+        height:1.04rem;
+        line-height: .4rem;
+        // border: 1px solid #ccc;
+        padding-top: .4rem;
+      }
+      .price {
+        color: red;
+        font-size: .32rem;
+        // font-weight: 700;
+      }
+    }
+  }
+}
+.mb_productfooter {
+  width: 100%;
+  height: 1.266667rem;
+  padding: .133333rem .6rem;
+  position: relative;
+  select {
+    width: 2rem;
+    height: .933333rem;
+    border: 1px solid #ccc !important;
+    position: absolute;
+    left: 4rem;
+    padding-left: .533333rem;
+    -webkit-appearance: select;
+  }
+
+
+  div {
+    width: 2.133333rem;
+    height: .946667rem;
+    background: linear-gradient(to bottom, white, #ccc);
+    border-radius: .266667rem;
+    padding-top: .2rem;
+    border: 1px solid #ccc;
+    text-align: center;
+   a {
+    font-size: .266667rem;
+   }
+
+  }
+}
+

@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>商品列表详情页</title>
+  <script src="lib/js/flexible.js"></script>
+  <link rel="stylesheet" href="lib/mui/css/mui.css">
+  <link rel="stylesheet" href="css/common.css">
+  <link rel="stylesheet" href="css/bijia.css">
+</head>
+
+<body>
+  <div class="container">
+    <div class="mb_header">
+      <img class="mb_logo" src="images/header_logo.png" alt="">
+      <img class="mui-pull-right mb_app" src="images/header_app.png" alt="">
+    </div>
+    <div class="mb_content">
+      <div class="mb_search">
+        <input type="text" placeholder="请输入你想比价的商品" class="mui-pull-left">
+        <button class="mui-pull-right mui-btn mui-btn-yellow">搜索</button>
+      </div>
+      <div class="mb_crumb">
+
+        <a href="index.html">首页&gt;</a>
+        <a href="category.html" class="category">全部分类&gt;</a>
+        <a href="#" class="title">首页&gt;</a>
+        <div class="mui-pull-right">筛选</div>
+
+      </div>
+      <div class="mb_product">
+        <!-- 产品挖坑 -->
+      </div>
+    </div>
+
+    <div class="mb_tab">
+      <ul>
+        <li>
+          <a href="#">比价购买</a>
+        </li>
+        <li>
+          <a href="#">产品参数</a>
+        </li>
+        <li>
+          <a href="#">评价(2333)</a>
+        </li>
+      </ul>
+    </div>
+    <!-- <div class="priceinfo">
+      <div class="left mui-pull-left">
+        <img src="images/slogo.png" alt="">
+        <span class="org">飞牛网</span>
+      </div>
+      <div class="right mui-pull-right">
+        <span class="price">2699</span>
+        <div class="btn mui-pull-right">去购买</div>
+      </div>
+    </div> -->
+    <div class="mb_table">
+      <!-- 表格挖坑 -->
+    </div>
+    <div class="note"> * 实际价格以各网站列出的实时售价为准，我们提供的价格可能有数小时至数日的延迟。
+    </div>
+
+    <div class="comment_title">网友评价</div>
+    <div class="comment">
+     
+      <!-- 评论挖坑 -->
+    </div>
+    <div class="comment_footer">
+      <p class="more">查看更多评论</p>
+    </div>
+
+  </div>
+
+
+  <div class="mb_footer">
+    <div class="footertop">
+      <a href="javascript:;">登录</a>
+      <a href="javascript:;">注册</a>
+      <a href="#">
+        <span class="mui-icon mui-icon-arrowup"></span>返回顶部</a>
+    </div>
+    <p class="txt">
+      <a href="#" class="red">手机APP下载</a>
+      <a href="#">慢慢买手机版</a>
+      <a href="#" class="grey">--掌上比价平台</a>
+    </p>
+    <p class="wz">m.manmanbuy.com</p>
+  </div>
+  </div>
+
+  <script type="text/html" id="tpl_product">
+    {{each result v i}}
+    <div class="product_title">{{v.productName}}</div>
+    <div class="product_img">
+      {{@v.productImg}}
+    </div>
+    <div class="product_collect">
+      <img src="images/sc.jpg" alt="">
+    {{/each}}
+  </script>
+  <script type="text/html" id="tpl_table">
+  {{each result v i}}
+  {{@v.bjShop}}
+  {{/each}}
+  </script>
+
+  <script type="text/html" id="tpl_comment">
+    {{each result v i}}
+    
+      <div class="content">
+        <div class="top mui-clearfix">
+          <div class="mui-pull-left">{{v.comName}}</div>
+          <div class="mui-pull-right">
+            <p>{{v.comTime}}</p>
+            <p>{{v.comFrom}}</p>
+          </div>
+        </div>
+        <div class="bot">{{v.comContent}}</div>
+      </div>
+      {{/each}}
+  </script>
+
+  <script src="lib/jquery/jquery.min.js"></script>
+  <script src="lib/mui/js/mui.js"></script>
+  <script src="lib/art-template-master/lib/template-web.js"></script>
+  <script src="js/common/Route.js"></script>
+  <script src="js/common/Tools.js"></script>
+  <script src="js/bijia.js"></script>
+</body>
+
+</html>

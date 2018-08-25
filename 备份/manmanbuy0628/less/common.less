@@ -1,0 +1,75 @@
+@import 'variable';
+@import 'normalize';
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+a {
+  color: black;
+  text-decoration: none;
+  font-size: .186667rem /* 14/75 */
+}
+a:hover {
+  color: black;
+}
+.container {
+  width: 100%;
+  // height: 2000px;
+  max-width: 750px;
+  min-width: 320px;
+  position: relative;
+  margin: 0 auto;
+ 
+}
+.mb_header {
+  width: 100%;
+  height:100rem/75;
+  background-color:@mColor;
+  padding: 15rem/75;
+  position: relative;
+
+  .mb_logo {
+    margin-top: 10px;
+    width: 5.04rem /* 378/75 */;
+    height: .666667rem /* 50/75 */;
+  }
+  .mb_app {
+    width: .933333rem /* 70/75 */;
+    height: .933333rem /* 70/75 */;
+  }
+}
+
+.mb_footer {
+  .footertop {
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    margin-top: .666667rem /* 50/75 */;
+    a {
+      width: 30%;
+      height: .866667rem /* 65/75 */;
+      border-left: 1px solid #ccc;
+      line-height: .866667rem /* 65/75 */;
+      text-align: center;
+      display: inline-block;
+      font-size: .266667rem /* 20/75 */;
+    }
+  }
+   .txt {
+     margin-top: .133333rem /* 10/75 */;
+     text-align: center;
+     font-size: .24rem /* 18/75 */;
+     .red {
+       color: red;
+     }
+     .grey {
+       color: @txtColor;
+     }
+   }
+   .wz {
+     margin-top: -.133333rem /* 10/75 */;
+     text-align: center;
+     color: @txtColor;
+     font-size: .16rem /* 12/75 */
+   }
+}
